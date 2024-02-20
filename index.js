@@ -7,6 +7,7 @@ const max = 10;
 let randomNum1;
 let randomNum2;
 let randomNum3;
+const charLabel = document.getElementById('myCharLabel');
 
 
 myButton.onclick = function() {
@@ -19,3 +20,7 @@ myButton.onclick = function() {
     label2.textContent = randomNum2;
     label3.textContent = randomNum3;
 };
+
+let myString = "   All work and no play makes Jack a dull boy.    ";
+charLabel.innerText = myString.replaceAll('dull boy', 'promising young man').padEnd(180, "All work and all play baby. ...").repeat(75);
+console.log(myString.replaceAll("dull boy", "sick fuck"));
