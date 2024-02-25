@@ -1,13 +1,52 @@
 
 /* A GAME WHERE COMPUTER TRIES TO GUESS A NUMBER    
-STEP 1. YOU COME UP WITH A NUMBER 
+STEP 1. YOU COME UP WITH A NUMBER FROM 1 - 100
     make a const to store it
 STEP 2. COMPUTER MAKES A GUESS AND WAITS FOR YOUR REPLY
-STEP 3.A. YOU CONFIRM THE CORRECT GUESS - COMPUTER CONGRATULATES ITSELF
+    a variable - computer outputs random number within the current parameters 
+STEP 3.A. YOU CONFIRM THE CORRECT GUESS 
+    computer congratulates itself
+    asks you if you want to make a guess again
 STEP 3.B. YOU SAY THAT THE NUMBER IS BIGGER
-    COMPUTER UPDATES PARAMETERS, MAKES ANOTHER GUESS AND RETURNS TO THE END OF 2.
+    COMPUTER UPDATES PARAMETERS, 
+    MAKES ANOTHER GUESS AND RETURNS TO THE END OF 2.
 STEP 3.C. YOU SAY THAT THE NUMBER IS SMALLER 
-    COMPUTER UPDATES PARAMETERS, MAKES ANOTHER GUESS AND RETURNS TO THE END OF 2.
+    COMPUTER UPDATES PARAMETERS, 
+    MAKES ANOTHER GUESS AND RETURNS TO THE END OF 2.*/
+
+
+const textField = document.getElementById("myLabel1");
+const btnTooHigh = document.getElementById("btnTooHigh");
+const btnTooLow = document.getElementById("btnTooLow");
+const btnWon = document.getElementById("btnWon");
+const mySumbit = document.getElementById("mySubmit");
+let guessed = false;
+let currentMin = 1;
+let currentMax = 100;
+
+
+function getRandomNumberMinMax(){
+    return Math.floor(Math.random * (currentMax - currentMin) + currentMin + 1);
+};
+
+mySumbit.onclick = function() {
+    let currentGuess;
+    while (guessed === false) {
+        currentGuess = getRandomNumberMinMax();
+        if (btnTooLow.clicked == true) {
+            currentMin+= currentGuess;            
+        }
+        else if (btnTooHigh.clicked == true) {
+         currentMax-= currentGuess;   
+        }
+        else if (btnWon.clicked == true) {
+            guessed = true;
+            window.alert("YOU WON!")
+        }};
+        
+};
+
+
 
 
 
