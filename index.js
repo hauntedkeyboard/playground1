@@ -17,14 +17,16 @@ STEP 3.C. YOU SAY THAT THE NUMBER IS SMALLER
     MAKES ANOTHER GUESS AND RETURNS TO THE END OF 2.*/
 
 
-// const textField = document.getElementById("myLabel1");
-// const btnTooHigh = document.getElementById("btnTooHigh");
-// const btnTooLow = document.getElementById("btnTooLow");
-// const btnWon = document.getElementById("btnWon");
-// const mySumbit = document.getElementById("mySubmit");
-// let guessed = false;
-// let currentMin = 1;
-// let currentMax = 100;
+const textField = document.getElementById("myLabel1");
+const btnTooHigh = document.getElementById("btnTooHigh");
+const btnTooLow = document.getElementById("btnTooLow");
+const btnWon = document.getElementById("btnWon");
+const mySumbit = document.getElementById("mySubmit");
+let guessed = false;
+let currentMin = 1;
+let currentMax = 100;
+
+
 
 
 // function getRandomNumberMinMax(){
@@ -90,15 +92,15 @@ STEP 3.C. YOU SAY THAT THE NUMBER IS SMALLER
 // let lastWord = myString.slice(myString.trim().lastIndexOf(" "));
 // charLabel.innerText = lastWord;
 
-function summ(...numbers){
-    let total = 0;
-    for (let number of numbers){
-        total += number;
-    };
-    console.log(total);
-    console.log(numbers);
-    console.log(...numbers);
-    return total;
-};
+// function summ(...numbers){
+//     let total = 0;
+//     for (let number of numbers){
+//         total += number;
+//     };
+//     console.log(total);
+//     console.log(numbers);
+//     console.log(...numbers);
+//     return total;
+// };
 
-sum = summ(1,2,3,4,5);
+// sum = summ(1,2,3,4,5);
